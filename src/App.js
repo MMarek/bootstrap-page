@@ -11,7 +11,7 @@ function App() {
         <HashRouter>
             <Switch>
                 <Route exact path='/' component={Navbars}/>
-                <Route exact path='/' component={Alerts}/>
+                <Route exact path='/alerts' component={Alerts}/>
             </Switch>
         </HashRouter>
     )
