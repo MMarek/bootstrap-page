@@ -5,7 +5,7 @@ import {Navbar, Nav, NavDropdown, Form, FormControl, Button, InputGroup, Contain
 function Navbars() {
 
     return (
-        <header>
+        <header className='container'>
 
             <Navbar bg="light" expand="lg">
                 <Navbar.Brand href="#">React-Bootstrap</Navbar.Brand>
