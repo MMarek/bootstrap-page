@@ -6,6 +6,7 @@ import {HashRouter, Route, Switch} from 'react-router-dom';
 import Navbars from './components/Navbars';
 import Alerts from './components/Alerts';
 import Badges from "./components/Badges";
+import Buttons from "./components/Buttons";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Route exact path='/' component={Navbars}/>
                 <Route exact path='/alerts' component={Alerts}/>
                 <Route exact path='/badges' component={Badges}/>
+                <Route exact path='/buttons' component={Buttons}/>
             </Switch>
         </HashRouter>
     )
