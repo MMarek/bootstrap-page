@@ -9,6 +9,7 @@ import Badges from "./components/Badges";
 import Buttons from "./components/Buttons";
 import Cards from "./components/Cards";
 import Carousels from "./components/Carousels";
+import Forms from './components/Forms';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route exact path='/buttons' component={Buttons}/>
                 <Route exact path='/cards' component={Cards}/>
                 <Route exact path='/carousels' component={Carousels}/>
+                <Route exact path='/forms' component={Forms}/>
             </Switch>
         </HashRouter>
     )
