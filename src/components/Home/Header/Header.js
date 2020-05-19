@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {Nav, Navbar, NavDropdown, Container, Row, Col, Image, Jumbotron, Button} from "react-bootstrap";
 import bootstrap from '../../../assets/bootstrap.png';
 
 class Header extends Component {
@@ -24,18 +24,30 @@ class Header extends Component {
                                 {/*<NavDropdown.Divider />*/}
                                 {/*<NavDropdown.Item href="#">Separated link</NavDropdown.Item>*/}
                             </NavDropdown>
+                            <Nav.Link href="#">Informacje</Nav.Link>
+                            <Nav.Link href="#">Dodatki</Nav.Link>
+
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#">Dodatkowe informacje</Nav.Link>
+                            <Nav.Link href="#">Zbyteczne informacje</Nav.Link>
                             <Nav.Link eventKey={2} href="#">
                                 O mnie
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
-                <div>
-                    <img src={bootstrap} alt={bootstrap}/>;
-                </div>
+
+
+                <Jumbotron>
+                    <h1>O co chodzi?</h1>
+                    <p>
+                        Cała strona stworzona przy użyciu bootstrapa, w celach edukacyjnych.
+                    </p>
+                    <p>
+                        <Button variant="primary">Niebieski guzik</Button>
+                    </p>
+                </Jumbotron>
+
             </>
         )
     }
