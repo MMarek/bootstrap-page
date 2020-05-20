@@ -21,6 +21,7 @@ class Header extends Component {
                                 <NavDropdown.Item href="#carousels">Carousels</NavDropdown.Item>
                                 <NavDropdown.Item href="#badges">Badges</NavDropdown.Item>
                                 <NavDropdown.Item href="#forms">Forms</NavDropdown.Item>
+                                <NavDropdown.Item href="#tooltips">Tooltips</NavDropdown.Item>
                                 {/*<NavDropdown.Divider />*/}
                                 {/*<NavDropdown.Item href="#">Separated link</NavDropdown.Item>*/}
                             </NavDropdown>

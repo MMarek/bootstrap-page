@@ -10,6 +10,7 @@ import Buttons from "./components/Buttons";
 import Cards from "./components/Cards";
 import Carousels from "./components/Carousels";
 import Forms from './components/Forms';
+import Tooltips from "./components/Tooltips";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                 <Route exact path='/cards' component={Cards}/>
                 <Route exact path='/carousels' component={Carousels}/>
                 <Route exact path='/forms' component={Forms}/>
+                <Route exact path='/tooltips' component={Tooltips}/>
             </Switch>
         </HashRouter>
     )
