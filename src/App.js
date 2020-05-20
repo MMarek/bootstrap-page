@@ -12,6 +12,7 @@ import Carousels from "./components/Carousels";
 import Forms from './components/Forms';
 import Tooltips from "./components/Tooltips";
 import Progres from "./components/Progres";
+import Spinners from "./components/Spinners";
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                 <Route exact path='/forms' component={Forms}/>
                 <Route exact path='/tooltips' component={Tooltips}/>
                 <Route exact path='/progres' component={Progres}/>
+                <Route exact path='/spinners' component={Spinners}/>
             </Switch>
         </HashRouter>
     )
