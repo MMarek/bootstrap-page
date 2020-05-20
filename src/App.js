@@ -14,6 +14,7 @@ import Tooltips from "./components/Tooltips";
 import Progres from "./components/Progres";
 import Spinners from "./components/Spinners";
 import Tables from "./components/Table";
+import Tabs from "./components/Tabs";
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                 <Route exact path='/spinners' component={Spinners}/>
                 <Route exact path='/spinners' component={Spinners}/>
                 <Route exact path='/tables' component={Tables}/>
+                <Route exact path='/tabs' component={Tabs}/>
             </Switch>
         </HashRouter>
     )
