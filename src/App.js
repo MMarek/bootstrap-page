@@ -11,6 +11,7 @@ import Cards from "./components/Cards";
 import Carousels from "./components/Carousels";
 import Forms from './components/Forms';
 import Tooltips from "./components/Tooltips";
+import Progres from "./components/Progres";
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                 <Route exact path='/carousels' component={Carousels}/>
                 <Route exact path='/forms' component={Forms}/>
                 <Route exact path='/tooltips' component={Tooltips}/>
+                <Route exact path='/progres' component={Progres}/>
             </Switch>
         </HashRouter>
     )
