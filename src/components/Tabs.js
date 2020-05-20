@@ -81,6 +81,8 @@ function Example2() {
 }
 
 
+
+
 function Tabs() {
     return (
         <>
@@ -179,7 +181,10 @@ function Tabs() {
 
             <h3>6:</h3>
             <Example2/>
+
+
             
+
         </>
     )
 }

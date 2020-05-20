@@ -27,6 +27,8 @@ class Header extends Component {
                                 <NavDropdown.Item href="#tables">Tables</NavDropdown.Item>
                                 <NavDropdown.Item href="#tabs">Tabs/Zakładki</NavDropdown.Item>
                                 <NavDropdown.Item href="#ultilities">Ultilities</NavDropdown.Item>
+                                <NavDropdown.Item href="#dropdowns">Dropdowns</NavDropdown.Item>
+                                <NavDropdown.Item href="#modals">Modals</NavDropdown.Item>
                                 {/*<NavDropdown.Divider />*/}
                                 {/*<NavDropdown.Item href="#">Separated link</NavDropdown.Item>*/}
                             </NavDropdown>

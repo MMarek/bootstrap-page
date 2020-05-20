@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {
     Button,
     ButtonGroup,
@@ -10,6 +10,34 @@ import {
     DropdownButton,
     Dropdown
 } from 'react-bootstrap';
+
+function simulateNetworkRequest() {
+    return new Promise((resolve) => setTimeout(resolve, 2000));
+}
+
+function LoadingButton() {
+    const [isLoading, setLoading] = useState(false);
+
+    useEffect(() => {
+        if (isLoading) {
+            simulateNetworkRequest().then(() => {
+                setLoading(false);
+            });
+        }
+    }, [isLoading]);
+
+    const handleClick = () => setLoading(true);
+
+    return (
+        <Button
+            variant="primary"
+            disabled={isLoading}
+            onClick={!isLoading ? handleClick : null}
+        >
+            {isLoading ? 'Loading…' : 'Click to load'}
+        </Button>
+    );
+}
 
 
 function Buttons() {
@@ -234,7 +262,7 @@ function Buttons() {
                 </DropdownButton>
             </ButtonGroup>
 
-            <h3>dchylenie pionowe:</h3>
+            <h3>Odchylenie pionowe:</h3>
             <ButtonGroup vertical>
                 <Button>Button</Button>
                 <Button>Button</Button>
@@ -257,6 +285,9 @@ function Buttons() {
                     <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
                 </DropdownButton>
             </ButtonGroup>
+
+            <h3>Loading Button</h3>
+            <LoadingButton/>
         </>
     )
 }

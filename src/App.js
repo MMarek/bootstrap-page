@@ -16,6 +16,8 @@ import Spinners from "./components/Spinners";
 import Tables from "./components/Table";
 import Tabs from "./components/Tabs";
 import Ultilities from "./components/Ultilities";
+import Dropdowns from "./components/Dropdowns";
+import Modals from "./components/Modals";
 
 function App() {
     return (
@@ -36,6 +38,8 @@ function App() {
                 <Route exact path='/tables' component={Tables}/>
                 <Route exact path='/tabs' component={Tabs}/>
                 <Route exact path='/ultilities' component={Ultilities}/>
+                <Route exact path='/dropdowns' component={Dropdowns}/>
+                <Route exact path='/modals' component={Modals}/>
             </Switch>
         </HashRouter>
     )

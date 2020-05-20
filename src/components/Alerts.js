@@ -1,34 +1,95 @@
-// import React from "react";
-// import Alert from 'react-bootstrap';
-//
-// function Alerts() {
-//
-//     return (
-//         [
-//             'primary',
-//             'secondary',
-//             'success',
-//             'danger',
-//             'warning',
-//             'info',
-//             'light',
-//             'dark',
-//         ].map((variant, idx) => (
-//             <Alert key={idx} variant={variant}>
-//                 This is a {variant} alert—check it out!
-//             </Alert>
-//         )));
-//
-// }
-//
-// export default Alerts;
+import React, {useState} from "react";
+import {Alert, Button} from 'react-bootstrap'
 
+function Alert1() {
 
-import React from "react";
-import {Alert} from 'react-bootstrap'
+    return (
+        [
+            'primary',
+            'secondary',
+            'success',
+            'danger',
+            'warning',
+            'info',
+            'light',
+            'dark',
+        ].map((variant, idx) => (
+            <Alert key={idx} variant={variant}>
+                This is a {variant} alert—check it out!
+            </Alert>
+        )));
+
+}
+
+function Alert2() {
+return(
+    [
+        'primary',
+        'secondary',
+        'success',
+        'danger',
+        'warning',
+        'info',
+        'light',
+        'dark',
+    ].map((variant, idx) => (
+        <Alert key={idx} variant={variant}>
+            This is a {variant} alert with{' '}
+            <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you
+            like.
+        </Alert>
+    ))
+)
+}
+
+function Alert3() {
+    const [show, setShow] = useState(true);
+
+    if (show) {
+        return (
+            <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+                <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+                <p>
+                    Change this and that and try again. Duis mollis, est non commodo
+                    luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                    Cras mattis consectetur purus sit amet fermentum.
+                </p>
+            </Alert>
+        );
+    }
+    return <Button onClick={() => setShow(true)}>Show Alert</Button>;
+}
+
+function Alert4() {
+    const [show, setShow] = useState(true);
+
+    return (
+        <>
+            <Alert show={show} variant="success">
+                <Alert.Heading>How's it going?!</Alert.Heading>
+                <p>
+                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                    lacinia odio sem nec elit. Cras mattis consectetur purus sit amet
+                    fermentum.
+                </p>
+                <hr />
+                <div className="d-flex justify-content-end">
+                    <Button onClick={() => setShow(false)} variant="outline-success">
+                        Close me ya'll!
+                    </Button>
+                </div>
+            </Alert>
+
+            {!show && <Button onClick={() => setShow(true)}>Show Alert</Button>}
+        </>
+    );
+}
+
 
 function Alerts() {
 return (
+    <>
+        <h3>1:</h3>
     <Alert variant="success">
         <Alert.Heading>Hey, nice to see you</Alert.Heading>
         <p>
@@ -42,6 +103,20 @@ return (
             and tidy.
         </p>
     </Alert>
+
+        <h3>2:</h3>
+        <Alert1/>
+
+        <h3>3:</h3>
+        <Alert2/>
+
+        <h3>4:</h3>
+        <Alert3/>
+
+        <h3>5:</h3>
+        <Alert4/>
+
+    </>
 );
 }
 
