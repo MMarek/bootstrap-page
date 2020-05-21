@@ -53,6 +53,8 @@ class Header extends Component {
                     </p>
                     <p>
                         <Button variant="primary">Niebieski guzik</Button>
+                        <Button variant="danger">Niebieski guzik</Button>
+                        <Button variant="dark">Niebieski guzik</Button>
                     </p>
                 </Jumbotron>
 
