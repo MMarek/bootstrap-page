@@ -42,62 +42,75 @@ function LoadingButton() {
 
 function Buttons() {
     return (
-        <>
-            <>
-                <h3>Zwykłe guziki:</h3>
-                <Button variant="primary">Primary</Button>{' '}
-                <Button variant="secondary">Secondary</Button>{' '}
-                <Button variant="success">Success</Button>{' '}
-                <Button variant="warning">Warning</Button>{' '}
-                <Button variant="danger">Danger</Button> <Button variant="info">Info</Button>{' '}
-                <Button variant="light">Light</Button> <Button variant="dark">Dark</Button>{' '}
-                <Button variant="link">Link</Button>
-            </>
+        <header className="block">
+            <h5 className='texts text-center'>Zwykłe guziki:</h5>
+            <br/>
 
             <>
-                <h3>Guziki konspektowe:</h3>
-                <Button variant="outline-primary">Primary</Button>{' '}
-                <Button variant="outline-secondary">Secondary</Button>{' '}
-                <Button variant="outline-success">Success</Button>{' '}
-                <Button variant="outline-warning">Warning</Button>{' '}
-                <Button variant="outline-danger">Danger</Button>{' '}
-                <Button variant="outline-info">Info</Button>{' '}
-                <Button variant="outline-light">Light</Button>{' '}
-                <Button variant="outline-dark">Dark</Button>
+                <div className='buttons'>
+                    <Button variant="primary">Primary</Button>{' '}
+                    <Button variant="secondary">Secondary</Button>{' '}
+                    <Button variant="success">Success</Button>{' '}
+                    <Button variant="warning">Warning</Button>{' '}
+                    <Button variant="danger">Danger</Button> <Button variant="info">Info</Button>{' '}
+                    <Button variant="light">Light</Button> <Button variant="dark">Dark</Button>{' '}
+                    <Button variant="link">Link</Button>
+                </div>
             </>
 
+            <br/>
+
             <>
-                <h3>Tagi przycisków:</h3>
+                <div className='buttons'>
+                    <Button variant="outline-primary">Primary</Button>{' '}
+                    <Button variant="outline-secondary">Secondary</Button>{' '}
+                    <Button variant="outline-success">Success</Button>{' '}
+                    <Button variant="outline-warning">Warning</Button>{' '}
+                    <Button variant="outline-danger">Danger</Button>{' '}
+                    <Button variant="outline-info">Info</Button>{' '}
+                    <Button variant="outline-light">Light</Button>{' '}
+                    <Button variant="outline-dark">Dark</Button>
+                </div>
+            </>
+
+            <br/>
+
+            <>
+                <h3 className='texts'>Tagi przycisków:</h3>
                 <Button href="#">Link</Button> <Button type="submit">Button</Button>{' '}
                 <Button as="input" type="button" value="Input"/>{' '}
                 <Button as="input" type="submit" value="Submit"/>{' '}
                 <Button as="input" type="reset" value="Reset"/>
             </>
 
-            <>
-                <h3>Rozmiary:</h3>
-                <>
-                    <div className="mb-2">
-                        <Button variant="primary" size="lg">
-                            Large button
-                        </Button>{' '}
-                        <Button variant="secondary" size="lg">
-                            Large button
-                        </Button>
-                    </div>
-                    <div>
-                        <Button variant="primary" size="sm">
-                            Small button
-                        </Button>{' '}
-                        <Button variant="secondary" size="sm">
-                            Small button
-                        </Button>
-                    </div>
-                </>
-            </>
+            <br/>
 
             <>
-                <h3>Obejmujące całą szerokość rodzica:</h3>
+                <div className="text-right mb-2">
+
+                    <h3 className='texts'>Rozmiary:</h3>
+
+                    <Button variant="primary" size="lg">
+                        Large button
+                    </Button>{' '}
+                    <Button variant="secondary" size="lg">
+                        Large button
+                    </Button>
+                </div>
+                <div className='text-right'>
+                    <Button variant="primary" size="sm">
+                        Small button
+                    </Button>{' '}
+                    <Button variant="secondary" size="sm">
+                        Small button
+                    </Button>
+                </div>
+            </>
+
+            <br/>
+
+            <>
+                <h3 className='texts'>Obejmujące całą szerokość rodzica:</h3>
                 <Button variant="primary" size="lg" block>
                     Block level button
                 </Button>
@@ -106,18 +119,22 @@ function Buttons() {
                 </Button>
             </>
 
-            <>
-                <h3>Stan aktywny:</h3>
+            <br/>
+
+            <div className='text-center'>
+                <h3 className='texts'>Stan aktywny:</h3>
                 <Button variant="primary" size="lg" active>
                     Primary button
                 </Button>{' '}
                 <Button variant="secondary" size="lg" active>
                     Button
                 </Button>
-            </>
+            </div>
 
-            <>
-                <h3>Stan nieaktywny:</h3>
+            <br/>
+
+            <div className='text-center'>
+                <h3 className='texts'>Stan nieaktywny:</h3>
                 <Button variant="primary" size="lg" disabled>
                     Primary button
                 </Button>{' '}
@@ -127,9 +144,12 @@ function Buttons() {
                 <Button href="#" variant="secondary" size="lg" disabled>
                     Link
                 </Button>
-            </>
-            <>
-                <h3>Do wyboru:</h3>
+            </div>
+
+            <br/>
+
+            <div className='text-center'>
+                <h3 className='texts'>Do wyboru:</h3>
                 <ButtonGroup toggle className="mb-2">
                     <ToggleButton type="checkbox" defaultChecked value="1">
                         Checked
@@ -147,10 +167,12 @@ function Buttons() {
                         Radio
                     </ToggleButton>
                 </ButtonGroup>
-            </>
+            </div>
+
+            <br/>
 
             <>
-                <h3>Niekontrolowane:</h3>
+                <h3 className='texts'>Niekontrolowane:</h3>
                 <ToggleButtonGroup type="checkbox" defaultValue={[1, 3]} className="mb-2">
                     <ToggleButton value={1}>Checkbox 1 (pre-checked)</ToggleButton>
                     <ToggleButton value={2}>Checkbox 2</ToggleButton>
@@ -164,15 +186,19 @@ function Buttons() {
                 </ToggleButtonGroup>
             </>
 
+            <br/>
+            <div className='text-right'>
+                <h3 className='texts'>Grupy guzików:</h3>
+                <ButtonGroup aria-label="Basic example">
+                    <Button variant="secondary">Left</Button>
+                    <Button variant="secondary">Middle</Button>
+                    <Button variant="secondary">Right</Button>
+                </ButtonGroup>
+            </div>
 
-            <h3>Grupy guzików:</h3>
-            <ButtonGroup aria-label="Basic example">
-                <Button variant="secondary">Left</Button>
-                <Button variant="secondary">Middle</Button>
-                <Button variant="secondary">Right</Button>
-            </ButtonGroup>
+            <br/>
 
-            <h3>Pasek guzików:</h3>
+            <h3 className='texts'>Pasek guzików:</h3>
             <ButtonToolbar aria-label="Toolbar with button groups">
                 <ButtonGroup className="mr-2" aria-label="First group">
                     <Button>1</Button> <Button>2</Button> <Button>3</Button> <Button>4</Button>
@@ -185,8 +211,10 @@ function Buttons() {
                 </ButtonGroup>
             </ButtonToolbar>
 
-            <>
-                <h3>Mieszanie grup guzików:</h3>
+            <br/>
+
+            <div className='text-center'>
+                <h3 className='texts'>Mieszanie grup guzików:</h3>
                 <ButtonToolbar className="mb-3" aria-label="Toolbar with Button groups">
                     <ButtonGroup className="mr-2" aria-label="First group">
                         <Button variant="secondary">1</Button>{' '}
@@ -228,22 +256,24 @@ function Buttons() {
                         />
                     </InputGroup>
                 </ButtonToolbar>
-            </>
+            </div>
+
+            <br/>
 
             <>
-                <h3>Różne rozmiary:</h3>
+                <h3 className='texts'>Różne rozmiary:</h3>
                 <ButtonGroup size="lg" className="mb-2">
                     <Button>Left</Button>
                     <Button>Middle</Button>
                     <Button>Right</Button>
                 </ButtonGroup>
-                <br />
+                <br/>
                 <ButtonGroup className="mb-2">
                     <Button>Left</Button>
                     <Button>Middle</Button>
                     <Button>Right</Button>
                 </ButtonGroup>
-                <br />
+                <br/>
                 <ButtonGroup size="sm">
                     <Button>Left</Button>
                     <Button>Middle</Button>
@@ -251,18 +281,23 @@ function Buttons() {
                 </ButtonGroup>
             </>
 
-            <h3>Zagnieżdżanie:</h3>
-            <ButtonGroup>
-                <Button>1</Button>
-                <Button>2</Button>
+            <br/>
+            <div className='text-right'>
+                <h3 className='texts'>Zagnieżdżanie:</h3>
+                <ButtonGroup>
+                    <Button>1</Button>
+                    <Button>2</Button>
 
-                <DropdownButton as={ButtonGroup} title="Dropdown" id="bg-nested-dropdown">
-                    <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
-                </DropdownButton>
-            </ButtonGroup>
+                    <DropdownButton as={ButtonGroup} title="Dropdown" id="bg-nested-dropdown">
+                        <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
+                        <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
+                    </DropdownButton>
+                </ButtonGroup>
+            </div>
 
-            <h3>Odchylenie pionowe:</h3>
+            <br/>
+
+            <h3 className='texts'>Odchylenie pionowe:</h3>
             <ButtonGroup vertical>
                 <Button>Button</Button>
                 <Button>Button</Button>
@@ -286,9 +321,19 @@ function Buttons() {
                 </DropdownButton>
             </ButtonGroup>
 
-            <h3>Loading Button</h3>
-            <LoadingButton/>
-        </>
+            <br/>
+
+            <div className='text-center'>
+                <h3 className='texts'>Loading Button:</h3>
+                <LoadingButton/>
+            </div>
+
+            <br/>
+            <br/>
+
+            <Button href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
+
+        </header>
     )
 }
 

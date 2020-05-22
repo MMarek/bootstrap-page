@@ -1,47 +1,69 @@
-import React from "react";
-import {Card, Button, ListGroup, ListGroupItem, Nav, CardGroup, CardDeck, CardColumns} from 'react-bootstrap';
+import React, {useState} from "react";
+import {Card, Button, ListGroup, ListGroupItem, Nav, CardGroup, CardDeck, CardColumns, Collapse} from 'react-bootstrap';
 
 function Color() {
-return(
-    [
-        'Primary',
-        'Secondary',
-        'Success',
-        'Danger',
-        'Warning',
-        'Info',
-        'Light',
-        'Dark',
-    ].map((variant, idx) => (
-        <>
-            <Card
-                bg={variant.toLowerCase()}
-                key={idx}
-                text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-                style={{ width: '18rem' }}
+    return (
+        [
+            'Primary',
+            'Secondary',
+            'Success',
+            'Danger',
+            'Warning',
+            'Info',
+            'Light',
+            'Dark',
+        ].map((variant, idx) => (
+            <>
+                <Card
+                    bg={variant.toLowerCase()}
+                    key={idx}
+                    text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                    style={{width: '18rem'}}
+                >
+                    <Card.Header>Header</Card.Header>
+                    <Card.Body>
+                        <Card.Title>{variant} Card Title </Card.Title>
+                        <Card.Text>
+                            Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                <br/>
+            </>
+        ))
+    )
+}
+
+function Example() {
+    const [open, setOpen] = useState(false);
+
+    return (
+        <div className='text-center'>
+            <Button
+                onClick={() => setOpen(!open)}
+                aria-controls="example-collapse-text"
+                aria-expanded={open}
             >
-                <Card.Header>Header</Card.Header>
-                <Card.Body>
-                    <Card.Title>{variant} Card Title </Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-            <br />
-        </>
-    ))
-)
+                Karty
+            </Button>
+            <Collapse in={open}>
+                <div id="example-collapse-text">
+                    <h3 className='texts text-center'> Karty - zapewniają elastyczny i rozszerzalny pojemnik na treści z
+                        wieloma
+                        wariantami i opcjami.
+                    </h3>
+                </div>
+            </Collapse>
+        </div>
+    );
 }
 
 function Cards() {
     return (
-        <>
-            <h3>Karty
-                Karty - zapewniają elastyczny i rozszerzalny pojemnik na treści z wieloma wariantami i opcjami.</h3>
-            <h3>Np:</h3>
-            <Card style={{width: '18rem'}}>
+        <div className='block text-center'>
+            <Example/>
+            <Card style={{width: '28rem'}}>
                 <Card.Img variant="top"/>
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
@@ -53,16 +75,23 @@ function Cards() {
                 </Card.Body>
             </Card>
 
-            <h3>Ciało karty z wypełnioną zawartością</h3>
+            <br/>
+
+            <h3 className='texts text-center'>Ciało karty z wypełnioną zawartością:</h3>
             <Card>
                 <Card.Body>This is some text within a card body.</Card.Body>
             </Card>
 
-            <h3>Skrócona wersja tylko dla Kart z ciałem i bez innych dzieci:</h3>
+            <br/>
+
+            <h3 className='texts text-center'>Skrócona wersja tylko dla Kart z ciałem i bez innych dzieci:</h3>
             <Card body>This is some text within a card body.</Card>
 
-            <h3>Tytuł + Text + Linki:</h3>
-            <Card style={{width: '18rem'}}>
+            <br/>
+            <br/>
+
+            <h3 className='texts text-right'>Tytuł + Text + Linki:</h3>
+            <Card style={{width: '18rem', float: 'right'}}>
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
@@ -75,7 +104,9 @@ function Cards() {
                 </Card.Body>
             </Card>
 
-            <h3>Listy grup, przykład 1:</h3>
+            <br/>
+
+            <h3 className='texts text-left'>Listy grup, przykład 1:</h3>
             <Card style={{width: '18rem'}}>
                 <ListGroup variant="flush">
                     <ListGroup.Item>Cras justo odio</ListGroup.Item>
@@ -83,7 +114,10 @@ function Cards() {
                     <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
                 </ListGroup>
             </Card>
-            <h3>Przykład 2:</h3>
+
+            <br/>
+
+            <h3 className='texts text-left'>Przykład 2:</h3>
             <Card style={{width: '18rem'}}>
                 <Card.Header>Featured</Card.Header>
                 <ListGroup variant="flush">
@@ -93,8 +127,8 @@ function Cards() {
                 </ListGroup>
             </Card>
 
-            <h3>Zbiór:</h3>
-            <Card style={{ width: '18rem' }}>
+            <h3 className='texts'>Zbiór:</h3>
+            <Card style={{width: '100%'}}>
                 <Card.Img variant="top"/>
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>
@@ -114,7 +148,9 @@ function Cards() {
                 </Card.Body>
             </Card>
 
-            <h3>Nagłówek i stopka 1:</h3>
+            <br/>
+
+            <h3 className='texts'>Nagłówek i stopka 1:</h3>
             <Card>
                 <Card.Header>Featured</Card.Header>
                 <Card.Body>
@@ -126,7 +162,9 @@ function Cards() {
                 </Card.Body>
             </Card>
 
-            <h3>2:</h3>
+            <br/>
+
+            <h3 className='texts'>2:</h3>
             <Card>
                 <Card.Header as="h5">Featured</Card.Header>
                 <Card.Body>
@@ -138,7 +176,9 @@ function Cards() {
                 </Card.Body>
             </Card>
 
-            <h3>3:</h3>
+            <br/>
+
+            <h3 className='texts'>3:</h3>
             <Card>
                 <Card.Header>Quote</Card.Header>
                 <Card.Body>
@@ -155,7 +195,9 @@ function Cards() {
                 </Card.Body>
             </Card>
 
-            <h3>4:</h3>
+            <br/>
+
+            <h3 className='texts'>4:</h3>
             <Card className="text-center">
                 <Card.Header>Featured</Card.Header>
                 <Card.Body>
@@ -168,7 +210,9 @@ function Cards() {
                 <Card.Footer className="text-muted">2 days ago</Card.Footer>
             </Card>
 
-            <h3>Nawigacja:</h3>
+            <br/>
+
+            <h3 className='texts'>Nawigacja:</h3>
             <Card>
                 <Card.Header>
                     <Nav variant="tabs" defaultActiveKey="#first">
@@ -194,7 +238,9 @@ function Cards() {
                 </Card.Body>
             </Card>
 
-            <h3>Nawigacja 2:</h3>
+            <br/>
+
+            <h3 className='texts'>Nawigacja 2:</h3>
             <Card>
                 <Card.Header>
                     <Nav variant="pills" defaultActiveKey="#first">
@@ -220,9 +266,11 @@ function Cards() {
                 </Card.Body>
             </Card>
 
-            <h3>Kolor ramki:</h3>
-            <>
-                <Card border="primary" style={{ width: '18rem' }}>
+            <br/>
+
+            <h3 className='texts'>Kolor ramki:</h3>
+            <div className='colorContainers'>
+                <Card border="primary" style={{width: '18rem'}}>
                     <Card.Header>Header</Card.Header>
                     <Card.Body>
                         <Card.Title>Primary Card Title</Card.Title>
@@ -232,9 +280,9 @@ function Cards() {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <br />
+                <br/>
 
-                <Card border="secondary" style={{ width: '18rem' }}>
+                <Card border="secondary" style={{width: '18rem'}}>
                     <Card.Header>Header</Card.Header>
                     <Card.Body>
                         <Card.Title>Secondary Card Title</Card.Title>
@@ -244,9 +292,9 @@ function Cards() {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <br />
+                <br/>
 
-                <Card border="success" style={{ width: '18rem' }}>
+                <Card border="success" style={{width: '18rem'}}>
                     <Card.Header>Header</Card.Header>
                     <Card.Body>
                         <Card.Title>Success Card Title</Card.Title>
@@ -256,9 +304,9 @@ function Cards() {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <br />
+                <br/>
 
-                <Card border="danger" style={{ width: '18rem' }}>
+                <Card border="danger" style={{width: '18rem'}}>
                     <Card.Header>Header</Card.Header>
                     <Card.Body>
                         <Card.Title>Danger Card Title</Card.Title>
@@ -268,9 +316,9 @@ function Cards() {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <br />
+                <br/>
 
-                <Card border="warning" style={{ width: '18rem' }}>
+                <Card border="warning" style={{width: '18rem'}}>
                     <Card.Header>Header</Card.Header>
                     <Card.Body>
                         <Card.Title>Warning Card Title</Card.Title>
@@ -280,9 +328,9 @@ function Cards() {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <br />
+                <br/>
 
-                <Card border="info" style={{ width: '18rem' }}>
+                <Card border="info" style={{width: '18rem'}}>
                     <Card.Header>Header</Card.Header>
                     <Card.Body>
                         <Card.Title>Info Card Title</Card.Title>
@@ -292,9 +340,9 @@ function Cards() {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <br />
+                <br/>
 
-                <Card border="dark" style={{ width: '18rem' }}>
+                <Card border="dark" style={{width: '18rem'}}>
                     <Card.Header>Header</Card.Header>
                     <Card.Body>
                         <Card.Title>Dark Card Title</Card.Title>
@@ -304,9 +352,9 @@ function Cards() {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <br />
+                <br/>
 
-                <Card border="light" style={{ width: '18rem' }}>
+                <Card border="light" style={{width: '18rem'}}>
                     <Card.Header>Header</Card.Header>
                     <Card.Body>
                         <Card.Title>Light Card Title</Card.Title>
@@ -316,13 +364,15 @@ function Cards() {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <br />
-            </>
+                <br/>
+            </div>
 
-            <h3>Layout kart:</h3>
+            <br/>
+
+            <h3 className='texts'>Layout kart:</h3>
             <CardGroup>
                 <Card>
-                    <Card.Img variant="top" src="" />
+                    <Card.Img variant="top" src=""/>
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -335,7 +385,7 @@ function Cards() {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src="" />
+                    <Card.Img variant="top" src=""/>
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -348,7 +398,7 @@ function Cards() {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src="" />
+                    <Card.Img variant="top" src=""/>
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -363,10 +413,12 @@ function Cards() {
                 </Card>
             </CardGroup>
 
-            <h3>Talia Kart/Deck:</h3>
+            <br/>
+
+            <h3 className='texts'>Talia Kart/Deck:</h3>
             <CardDeck>
                 <Card>
-                    <Card.Img variant="top" src="" />
+                    <Card.Img variant="top" src=""/>
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -379,7 +431,7 @@ function Cards() {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src="" />
+                    <Card.Img variant="top" src=""/>
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -392,7 +444,7 @@ function Cards() {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src="" />
+                    <Card.Img variant="top" src=""/>
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -407,10 +459,12 @@ function Cards() {
                 </Card>
             </CardDeck>
 
-            <h3>Kolumnada kart:</h3>
+            <br/>
+
+            <h3 className='texts'>Kolumnada kart:</h3>
             <CardColumns>
                 <Card>
-                    <Card.Img variant="top" src="" />
+                    <Card.Img variant="top" src=""/>
                     <Card.Body>
                         <Card.Title>Card title that wraps to a new line</Card.Title>
                         <Card.Text>
@@ -433,7 +487,7 @@ function Cards() {
                     </blockquote>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src="" />
+                    <Card.Img variant="top" src=""/>
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -471,7 +525,7 @@ function Cards() {
                     </Card.Body>
                 </Card>
                 <Card>
-                    <Card.Img src="" />
+                    <Card.Img src=""/>
                 </Card>
                 <Card className="text-right">
                     <blockquote className="blockquote mb-0 card-body">
@@ -501,9 +555,19 @@ function Cards() {
                 </Card>
             </CardColumns>
 
-            <h3>Colorowe:</h3>
+            <br/>
+
+            <h3 className='texts'>Kolorowe:</h3>
+            <div className='colorContainers'>
             <Color/>
-        </>
+            </div>
+
+            <br/>
+            <br/>
+
+            <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
+
+        </div>
     )
 }
 

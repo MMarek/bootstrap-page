@@ -148,7 +148,7 @@ function Navbars() {
                 </Navbar.Collapse>
             </Navbar>
 <br/>
-            <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
+            <Button href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
 
         </header>
 );
