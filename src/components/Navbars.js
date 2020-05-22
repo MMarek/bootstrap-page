@@ -5,21 +5,20 @@ import {Navbar, Nav, NavDropdown, Form, FormControl, Button, InputGroup, Contain
 function Navbars() {
 
     return (
-        <header className='container'>
-
+        <header className='block'>
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="">React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
+                        <Nav.Link href="#">Home</Nav.Link>
+                        <Nav.Link href="#">Link</Nav.Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Something</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Separated link</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <Form inline>
@@ -32,11 +31,11 @@ function Navbars() {
             <br/>
 
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#">Navbar</Navbar.Brand>
+                <Navbar.Brand href="">Navbar</Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    <Nav.Link href="#">Home</Nav.Link>
+                    <Nav.Link href="#">Features</Nav.Link>
+                    <Nav.Link href="#">Pricing</Nav.Link>
                 </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -47,11 +46,11 @@ function Navbars() {
             <br />
 
             <Navbar bg="primary" variant="dark">
-                <Navbar.Brand href="#">Navbar</Navbar.Brand>
+                <Navbar.Brand href="">Navbar</Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    <Nav.Link href="#">Home</Nav.Link>
+                    <Nav.Link href="#">Features</Nav.Link>
+                    <Nav.Link href="#">Pricing</Nav.Link>
                 </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -62,11 +61,11 @@ function Navbars() {
             <br />
 
             <Navbar bg="light" variant="light">
-                <Navbar.Brand href="#">Navbar</Navbar.Brand>
+                <Navbar.Brand href="">Navbar</Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    <Nav.Link href="#">Home</Nav.Link>
+                    <Nav.Link href="#">Features</Nav.Link>
+                    <Nav.Link href="#">Pricing</Nav.Link>
                 </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -77,11 +76,11 @@ function Navbars() {
             <br />
 
             <Navbar>
-                <Navbar.Brand href="#">Navbar with text</Navbar.Brand>
+                <Navbar.Brand href="">Navbar with text</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
-                        Signed in as: <a href="#login">Mark Otto</a>
+                        Signed in as: <a href="">Mark Otto</a>
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Navbar>
@@ -111,7 +110,7 @@ function Navbars() {
 
             <Container>
                 <Navbar expand="lg" variant="light" bg="light">
-                    <Navbar.Brand href="#">Navbar in Container - centers navbar</Navbar.Brand>
+                    <Navbar.Brand href="">Navbar in Container - centers navbar</Navbar.Brand>
                 </Navbar>
             </Container>
 
@@ -119,14 +118,14 @@ function Navbars() {
 
             <Navbar expand="lg" variant="light" bg="light">
                 <Container>
-                    <Navbar.Brand href="#">Container inside Navbar</Navbar.Brand>
+                    <Navbar.Brand href="">Container inside Navbar</Navbar.Brand>
                 </Container>
             </Navbar>
 
             <br />
 
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Navbar.Brand href="#">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="">React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
@@ -148,10 +147,11 @@ function Navbars() {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+<br/>
+            <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
 
         </header>
-
-    );
+);
 }
 
 export default Navbars;

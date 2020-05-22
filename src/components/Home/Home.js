@@ -8,10 +8,12 @@ class Home extends Component {
     render() {
         return (
             <>
-                <Header/>
-                <Body/>
-                <Footer/>
-                </>
+                <header className='block'>
+                    <Header/>
+                    <Body/>
+                    <Footer/>
+                </header>
+            </>
         )
     }
 }

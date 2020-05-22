@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Nav, Navbar, NavDropdown, Container, Row, Col, Image, Jumbotron, Button} from "react-bootstrap";
+import {Nav, Navbar, NavDropdown, Container, Row, Col, Image, Jumbotron, Button, Modal} from "react-bootstrap";
 import bootstrap from '../../../assets/bootstrap.png';
 
 class Header extends Component {
@@ -52,9 +52,7 @@ class Header extends Component {
                         Cała strona stworzona przy użyciu bootstrapa, w celach edukacyjnych.
                     </p>
                     <p>
-                        <Button variant="primary">Niebieski guzik</Button>
-                        <Button variant="danger">Niebieski guzik</Button>
-                        <Button variant="dark">Niebieski guzik</Button>
+                        <BlueBtn/>
                     </p>
                 </Jumbotron>
 
@@ -64,3 +62,45 @@ class Header extends Component {
 }
 
 export default Header;
+
+
+function MyVerticallyCenteredModal(props) {
+    return (
+        <Modal
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+        >
+            <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title-vcenter">
+                    Niebieski guzik </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <h4>Nagłówek treści</h4>
+                <p>
+                    Modal z nagłówkiem, treścią i zestawem akcji w stopce. </p>
+                Poziomy, wycentrowany i animowany.
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick={props.onHide}>Close</Button>
+            </Modal.Footer>
+        </Modal>
+    );
+}
+
+function BlueBtn() {
+    const [modalShow, setModalShow] = React.useState(false);
+
+    return (
+        <>
+            <Button variant="primary" onClick={() => setModalShow(true)}>
+                Niebieski guzik :) </Button>
+
+            <MyVerticallyCenteredModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
+        </>
+    );
+}

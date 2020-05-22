@@ -10,8 +10,7 @@ function Example() {
     return (
         <>
             <Button variant="primary" onClick={handleShow}>
-                Launch demo modal
-            </Button>
+                Zwykły modal z animacją </Button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -40,8 +39,7 @@ function Example2() {
     return (
         <>
             <Button variant="primary" onClick={handleShow}>
-                Launch demo modal
-            </Button>
+                Zwykły modal </Button>
 
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
@@ -75,7 +73,7 @@ function MyVerticallyCenteredModal(props) {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <h4>Centered Modal</h4>
+                <h4>Cantralny Modal</h4>
                 <p>
                     Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
                     dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
@@ -95,7 +93,7 @@ function Example3() {
     return (
         <>
             <Button variant="primary" onClick={() => setModalShow(true)}>
-                Launch vertically centered modal
+                Uruchom modal wyśrodkowany pionowo
             </Button>
 
             <MyVerticallyCenteredModal
@@ -111,8 +109,7 @@ function MydModalWithGrid(props) {
         <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
-                    Using Grid in Modal
-                </Modal.Title>
+                    Użyj Grida w Modalu </Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Container>
@@ -151,10 +148,9 @@ function Example4() {
     return (
         <>
             <Button variant="primary" onClick={() => setModalShow(true)}>
-                Launch modal with grid
-            </Button>
+                Uruchom modal z gridem </Button>
 
-            <MydModalWithGrid show={modalShow} onHide={() => setModalShow(false)} />
+            <MydModalWithGrid show={modalShow} onHide={() => setModalShow(false)}/>
         </>
     );
 }
@@ -165,8 +161,8 @@ function Example5() {
 
     return (
         <>
-            <Button onClick={() => setSmShow(true)}>Small modal</Button>{' '}
-            <Button onClick={() => setLgShow(true)}>Large modal</Button>
+            <Button onClick={() => setSmShow(true)}>Mały modal</Button>{' '}
+            <Button onClick={() => setLgShow(true)}>Duży modal</Button>
             <Modal
                 size="sm"
                 show={smShow}
@@ -175,7 +171,7 @@ function Example5() {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="example-modal-sizes-title-sm">
-                        Small Modal
+                        Mały Modal
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>...</Modal.Body>
@@ -188,7 +184,7 @@ function Example5() {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="example-modal-sizes-title-lg">
-                        Large Modal
+                        Duży Modal
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>...</Modal.Body>
@@ -203,7 +199,7 @@ function Example6() {
     return (
         <>
             <Button variant="primary" onClick={() => setShow(true)}>
-                Custom Width Modal
+                Niestandardowe stylowanie modala
             </Button>
 
             <Modal
@@ -214,7 +210,7 @@ function Example6() {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="example-custom-modal-styling-title">
-                        Custom Modal Styling
+                        Niestandardowe stylowanie modala
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -234,46 +230,51 @@ function Example6() {
 }
 
 
-
 function Modals() {
-return(
-    <>
-        <h3>1:</h3>
-        <Modal.Dialog>
-            <Modal.Header closeButton>
-                <Modal.Title>Modal title</Modal.Title>
-            </Modal.Header>
+    return (
+        <>
+            <header className='modalsContainers'>
+                <Modal.Dialog>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Modal title</Modal.Title>
+                    </Modal.Header>
 
-            <Modal.Body>
-                <p>Modal body text goes here.</p>
-            </Modal.Body>
+                    <Modal.Body>
+                        <p>Modal body text goes here.</p>
+                    </Modal.Body>
 
-            <Modal.Footer>
-                <Button variant="secondary">Close</Button>
-                <Button variant="primary">Save changes</Button>
-            </Modal.Footer>
-        </Modal.Dialog>
+                    <Modal.Footer>
+                        <Button variant="secondary">Close</Button>
+                        <Button variant="primary">Save changes</Button>
+                    </Modal.Footer>
+                </Modal.Dialog>
 
-        <h3>2:</h3>
-        <Example/>
+                <br/>
+                <Example/>
 
-        <h3>3:</h3>
-        <Example2/>
+                <br/>
+                <Example2/>
 
-        <h3>4:</h3>
-        <Example3/>
+                <br/>
+                <Example3/>
 
-        <h3>5:</h3>
-        <Example4/>
+                <br/>
+                <Example4/>
 
-        <h3>6:</h3>
-        <Example5/>
+                <br/>
+                <Example5/>
 
-        <h3>7:</h3>
-        <Example6/>
+                <br/>
+                <Example6/>
 
-    </>
-)
+                <br/>
+                <Button href="/" variant="danger">Powrót na stroną główną</Button>
+
+
+            </header>
+
+        </>
+    )
 }
 
 export default Modals

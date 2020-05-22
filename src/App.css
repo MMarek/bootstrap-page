@@ -157,3 +157,29 @@
     display: none;
   }
 }
+
+
+.block {
+  background-color: #008C9A;
+  height: auto;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.navBtn {
+  color: white;
+}
+
+.modalsContainers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #008C9A;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
