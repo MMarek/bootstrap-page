@@ -58,8 +58,8 @@ function Dropdown2() {
 
 function Dropdowns() {
     return (
-        <>
-            <h3>1:</h3>
+        <div className='block'>
+            <h3 className='texts'>1:</h3>
             <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                     Dropdown Button
@@ -72,17 +72,17 @@ function Dropdowns() {
                 </Dropdown.Menu>
             </Dropdown>
 
-            <h3>2:</h3>
+            <h3 className='texts'>2:</h3>
             <DropdownButton id="dropdown-basic-button" title="Dropdown button">
                 <Dropdown.Item href="#">Action</Dropdown.Item>
                 <Dropdown.Item href="#">Another action</Dropdown.Item>
                 <Dropdown.Item href="#">Something else</Dropdown.Item>
             </DropdownButton>
 
-            <h3>3:</h3>
+            <h3 className='texts'>3:</h3>
             <Dropdown1/>
 
-            <h3>4:</h3>
+            <h3 className='texts'>4:</h3>
             <Dropdown as={ButtonGroup}>
                 <Button variant="success">Split Button</Button>
 
@@ -95,10 +95,10 @@ function Dropdowns() {
                 </Dropdown.Menu>
             </Dropdown>
 
-            <h3>5:</h3>
+            <h3 className='texts'>5:</h3>
             <Dropdown2/>
 
-            <h3>6:</h3>
+            <h3 className='texts'>6:</h3>
             <>
                 <div className="mb-2">
                     {['up', 'down', 'left', 'right'].map((direction) => (
@@ -141,8 +141,13 @@ function Dropdowns() {
                     ))}
                 </div>
             </>
-        </>
 
+            <br/>
+            <br/>
+
+            <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
+
+        </div>
     )
 }
 

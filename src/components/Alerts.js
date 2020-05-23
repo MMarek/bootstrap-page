@@ -88,7 +88,7 @@ function Alert4() {
 
 function Alerts() {
 return (
-    <>
+    <div className='block'>
         <h3>1:</h3>
     <Alert variant="success">
         <Alert.Heading>Hey, nice to see you</Alert.Heading>
@@ -116,7 +116,11 @@ return (
         <h3>5:</h3>
         <Alert4/>
 
-    </>
+        <br/>
+
+        <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
+
+    </div>
 );
 }
 

@@ -268,7 +268,7 @@ function Modals() {
                 <Example6/>
 
                 <br/>
-                <Button href="/" variant="danger">Powrót na stroną główną</Button>
+                <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
 
 
             </header>

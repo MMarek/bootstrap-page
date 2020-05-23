@@ -81,12 +81,11 @@ function Example2() {
 }
 
 
-
-
 function Tabs() {
     return (
-        <>
-            <h3>1:</h3>
+        <div className='block'>
+            <h3 className='texts'>Zakładki:</h3>
+            <h3 className='texts'>1:</h3>
             <Toast>
                 <Toast.Header>
                     <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt=""/>
@@ -96,14 +95,14 @@ function Tabs() {
                 <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
             </Toast>
 
-            <h3>2:</h3>
+            <h3 className='texts'>2:</h3>
             <Example/>
 
-            <h3>3:</h3>
+            <h3 className='texts'>3:</h3>
             <>
                 <Toast>
                     <Toast.Header>
-                        <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
+                        <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt=""/>
                         <strong className="mr-auto">Bootstrap</strong>
                         <small>just now</small>
                     </Toast.Header>
@@ -111,7 +110,7 @@ function Tabs() {
                 </Toast>
                 <Toast>
                     <Toast.Header>
-                        <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
+                        <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt=""/>
                         <strong className="mr-auto">Bootstrap</strong>
                         <small>2 seconds ago</small>
                     </Toast.Header>
@@ -119,7 +118,7 @@ function Tabs() {
                 </Toast>
             </>
 
-            <h3>4:</h3>
+            <h3 className='texts'>4:</h3>
             <div
                 aria-live="polite"
                 aria-atomic="true"
@@ -136,7 +135,7 @@ function Tabs() {
                     }}
                 >
                     <Toast.Header>
-                        <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
+                        <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt=""/>
                         <strong className="mr-auto">Bootstrap</strong>
                         <small>just now</small>
                     </Toast.Header>
@@ -144,7 +143,7 @@ function Tabs() {
                 </Toast>
             </div>
 
-            <h3>5:</h3>
+            <h3 className='texts'>5:</h3>
             <div
                 aria-live="polite"
                 aria-atomic="true"
@@ -162,7 +161,7 @@ function Tabs() {
                 >
                     <Toast>
                         <Toast.Header>
-                            <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
+                            <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt=""/>
                             <strong className="mr-auto">Bootstrap</strong>
                             <small>just now</small>
                         </Toast.Header>
@@ -170,7 +169,7 @@ function Tabs() {
                     </Toast>
                     <Toast>
                         <Toast.Header>
-                            <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
+                            <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt=""/>
                             <strong className="mr-auto">Bootstrap</strong>
                             <small>2 seconds ago</small>
                         </Toast.Header>
@@ -179,13 +178,15 @@ function Tabs() {
                 </div>
             </div>
 
-            <h3>6:</h3>
+            <h3 className='texts'>6:</h3>
             <Example2/>
 
+            <br/>
+            <br/>
 
-            
+            <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
 
-        </>
+        </div>
     )
 }
 

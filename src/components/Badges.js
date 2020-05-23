@@ -4,9 +4,10 @@ import {Badge, Button} from 'react-bootstrap';
 function Badges() {
     return (
 
-        <header className='container-fluid'>
+        <header className='badgesContainers block'>
 
             <div>
+                <h3 className='texts'>Różne rozmiary:</h3>
                 <h1>
                     Nagłówek h1 <Badge variant="secondary">New</Badge>
                 </h1>
@@ -27,18 +28,20 @@ function Badges() {
                 </h6>
             </div>
 
+            <br/>
 
-
+            <h3 className='texts'>W guziku:</h3>
 
             <Button variant="primary">
                 Profile <Badge variant="light">9</Badge>
                 <span className="sr-only">unread messages</span>
             </Button>
 
-
-
+            <br/>
 
             <div>
+                <h3 className='texts'>Różne kolory:</h3>
+
                 <Badge variant="primary">Primary</Badge>{' '}
                 <Badge variant="secondary">Secondary</Badge>{' '}
                 <Badge variant="success">Success</Badge>{' '}
@@ -46,7 +49,6 @@ function Badges() {
                 <Badge variant="warning">Warning</Badge> <Badge variant="info">Info</Badge>{' '}
                 <Badge variant="light">Light</Badge> <Badge variant="dark">Dark</Badge>
             </div>
-
 
 
             <div>
@@ -75,6 +77,11 @@ function Badges() {
                     Dark
                 </Badge>
             </div>
+
+            <br/>
+
+            <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
+
 
         </header>
     );

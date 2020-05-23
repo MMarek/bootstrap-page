@@ -178,12 +178,40 @@
     border-radius: 10px;
 }
 
+.badgesContainers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #008C9A;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
 .colorContainers {
     display: flex;
-    /*flex-direction: row;*/
     justify-content: space-between;
     margin: 10px;
     padding: 10px;
+}
+
+.formContainers {
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: flex-end;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;}
+
+.spinnersContainers {
+    display: flex;
+    flex-direction: column;
+    background-color: #008C9A;
+
 }
 
 .buttons {
@@ -204,8 +232,8 @@
     .modalsContainers,
     .navBtn,
     .blocks,
-    .colorContainers
-    {
+    .colorContainers,
+    .badgesContainers {
         display: block;
         order: initial;
     }

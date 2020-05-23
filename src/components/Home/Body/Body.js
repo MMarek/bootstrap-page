@@ -1,5 +1,5 @@
 import React, {Component, useState} from "react";
-import {Button, Card, CardColumns, Collapse, Image, ToggleButton, ToggleButtonGroup} from 'react-bootstrap';
+import {Button, Card, CardColumns, Collapse, Dropdown, Image, ToggleButton, ToggleButtonGroup} from 'react-bootstrap';
 
 function Example() {
     const [open, setOpen] = useState(false);
@@ -135,8 +135,6 @@ class Body extends Component {
 
                 <br/>
 
-                <h5>Guziki:</h5>
-
                 <Button href="#navbars" variant="primary" size="lg" block>
                     Navbars </Button>
                 <Button href="#buttons" variant="secondary" size="lg" block>
@@ -150,35 +148,114 @@ class Body extends Component {
                 <Button href="#badges" variant="info" size="lg" block>
                     Badges </Button>
 
+                <br/>
+                <div className='buttons'>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Forms
+                        </Dropdown.Toggle>
 
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                            <Dropdown.Item href="#forms">Forms</Dropdown.Item>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                        </Dropdown.Menu>{' '}
+                    </Dropdown>
 
-                {/*<ToggleButtonGroup type="checkbox" defaultValue={[1, 3]} className="mb-2">*/}
-                {/*    <ToggleButton value={1}> Forms (pre-checked)</ToggleButton>*/}
-                {/*    <ToggleButton value={2}>Tooltips 2</ToggleButton>*/}
-                {/*    <ToggleButton value={3}>Progres-bars 3 (pre-checked)</ToggleButton>*/}
-                {/*</ToggleButtonGroup>*/}
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Progres-bars
+                        </Dropdown.Toggle>
 
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                            <Dropdown.Item href="#progres">Progres-bars</Dropdown.Item>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                        </Dropdown.Menu>{' '}
 
+                    </Dropdown>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Tooltips
+                        </Dropdown.Toggle>
 
-                <Button href="#forms" variant="light" size="lg" block>
-                    Forms </Button>
-                <Button href="#tooltips" variant="dark" size="lg" block>
-                    Tooltips </Button>
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                            <Dropdown.Item href="#tooltips">Tooltips</Dropdown.Item>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                        </Dropdown.Menu>{' '}
 
-                <Button href="#progres" variant="info" size="lg" block>
-                    Progres-bars </Button>
-                <Button href="#spinners" variant="danger" size="lg" block>
-                    Spinners </Button>
-                <Button href="#tables" variant="warning" size="lg" block>
-                    Tables </Button>
-                <Button href="#tabs" variant="success" size="lg" block>
-                    Tabs </Button>
-                <Button href="#ultilities" variant="secondary" size="lg" block>
-                    Ultilities </Button>
-                <Button href="#dropdowns" variant="primary" size="lg" block>
-                    Dropdowns </Button>
-                <Button href="#modals" variant="light" size="lg" block>
-                    Modals </Button>
+                    </Dropdown>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Spinners
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                            <Dropdown.Item href="#spinners">Spinners</Dropdown.Item>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                        </Dropdown.Menu>{' '}
+
+                    </Dropdown>
+                    <Dropdown>
+
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Tables
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                            <Dropdown.Item href="#tables">Tables</Dropdown.Item>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                        </Dropdown.Menu>{' '}
+                    </Dropdown>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Tabs
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                            <Dropdown.Item href="#tabs">Tabs</Dropdown.Item>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                        </Dropdown.Menu>{' '}
+                    </Dropdown>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Ultilities
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                            <Dropdown.Item href="#ultilities">Ultilities</Dropdown.Item>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                        </Dropdown.Menu>{' '}
+                    </Dropdown>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Dropdowns
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                            <Dropdown.Item href="#dropdowns">Dropdowns</Dropdown.Item>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                        </Dropdown.Menu>{' '}
+                    </Dropdown>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Modals
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                            <Dropdown.Item href="#modals">Modals</Dropdown.Item>
+                            <Dropdown.Item href="#">...</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </div>
+
 
             </>)
     }

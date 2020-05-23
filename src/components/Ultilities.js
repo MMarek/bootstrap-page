@@ -50,13 +50,20 @@ function Example2() {
 
 function Ultilities() {
     return (
-        <>
-            <h3>1:</h3>
+        <div className='block'>
+            <h3 className='texts'>Ultilities:</h3>
+            <h3 className='texts'>1:</h3>
             <Example/>
 
-            <h3>2:</h3>
+            <h3 className='texts'>2:</h3>
             <Example2/>
-        </>
+
+            <br/>
+            <br/>
+
+            <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
+
+        </div>
 
     )
 }
