@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/bootstrap-page/static/css/main.624cf9df.chunk.css",
+    "main.js": "/bootstrap-page/static/js/main.d489ef57.chunk.js",
+    "main.js.map": "/bootstrap-page/static/js/main.d489ef57.chunk.js.map",
+    "runtime-main.js": "/bootstrap-page/static/js/runtime-main.129cdf2f.js",
+    "runtime-main.js.map": "/bootstrap-page/static/js/runtime-main.129cdf2f.js.map",
+    "static/js/2.282a38d3.chunk.js": "/bootstrap-page/static/js/2.282a38d3.chunk.js",
+    "static/js/2.282a38d3.chunk.js.map": "/bootstrap-page/static/js/2.282a38d3.chunk.js.map",
+    "index.html": "/bootstrap-page/index.html",
+    "precache-manifest.90158c783c116992eb05c4d3ea403892.js": "/bootstrap-page/precache-manifest.90158c783c116992eb05c4d3ea403892.js",
+    "service-worker.js": "/bootstrap-page/service-worker.js",
+    "static/css/main.624cf9df.chunk.css.map": "/bootstrap-page/static/css/main.624cf9df.chunk.css.map",
+    "static/js/2.282a38d3.chunk.js.LICENSE.txt": "/bootstrap-page/static/js/2.282a38d3.chunk.js.LICENSE.txt",
+    "static/media/bootstrap.png": "/bootstrap-page/static/media/bootstrap.26c72605.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.129cdf2f.js",
+    "static/js/2.282a38d3.chunk.js",
+    "static/css/main.624cf9df.chunk.css",
+    "static/js/main.d489ef57.chunk.js"
+  ]
+}
