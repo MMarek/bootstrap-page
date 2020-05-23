@@ -11,8 +11,9 @@ class Home extends Component {
                 <header className='block'>
                     <Header/>
                     <Body/>
-                    <Footer/>
                 </header>
+                <Footer/>
+
             </>
         )
     }
