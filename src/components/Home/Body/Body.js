@@ -337,7 +337,6 @@ class Body extends Component {
                 <br/>
                 <br/>
                 <br/>
-
                 <br/>
                 <br/>
                 <br/>
@@ -512,8 +511,6 @@ class Body extends Component {
                 <br/>
                 <br/>
                 <br/>
-
-
                 <br/>
                 <br/>
 
