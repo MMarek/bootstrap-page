@@ -1,5 +1,16 @@
 import React, {useState} from "react";
-import {Card, Button, ListGroup, ListGroupItem, Nav, CardGroup, CardDeck, CardColumns, Collapse} from 'react-bootstrap';
+import {
+    Card,
+    Button,
+    ListGroup,
+    ListGroupItem,
+    Nav,
+    CardGroup,
+    CardDeck,
+    CardColumns,
+    Collapse
+}
+    from 'react-bootstrap';
 
 function Color() {
     return (
@@ -559,7 +570,7 @@ function Cards() {
 
             <h3 className='texts'>Kolorowe:</h3>
             <div className='colorContainers'>
-            <Color/>
+                <Color/>
             </div>
 
             <br/>

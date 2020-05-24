@@ -50,7 +50,6 @@ function Badges() {
                 <Badge variant="light">Light</Badge> <Badge variant="dark">Dark</Badge>
             </div>
 
-
             <div>
                 <Badge pill variant="primary">
                     Primary
@@ -81,7 +80,6 @@ function Badges() {
             <br/>
 
             <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
-
 
         </header>
     );

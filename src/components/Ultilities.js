@@ -47,7 +47,6 @@ function Example2() {
     );
 }
 
-
 function Ultilities() {
     return (
         <div className='block'>
@@ -64,7 +63,6 @@ function Ultilities() {
             <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
 
         </div>
-
     )
 }
 

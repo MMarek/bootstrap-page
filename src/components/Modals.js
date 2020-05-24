@@ -1,5 +1,12 @@
 import React, {useState} from "react";
-import {Modal, Button, Container, Row, Col} from 'react-bootstrap';
+import {
+    Modal,
+    Button,
+    Container,
+    Row,
+    Col
+}
+    from 'react-bootstrap';
 
 function Example() {
     const [show, setShow] = useState(false);
@@ -229,7 +236,6 @@ function Example6() {
     );
 }
 
-
 function Modals() {
     return (
         <>
@@ -270,9 +276,7 @@ function Modals() {
                 <br/>
                 <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
 
-
             </header>
-
         </>
     )
 }

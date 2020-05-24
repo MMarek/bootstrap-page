@@ -64,7 +64,6 @@ function Tooltips() {
             <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
 
         </div>
-
     )
 }
 

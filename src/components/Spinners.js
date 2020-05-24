@@ -18,7 +18,7 @@ function Spinners() {
                 <Spinner animation="border"/>
             </div>
 
-<br/>
+            <br/>
 
             <div className='text-center'>
                 <h3 className='texts'>3:</h3>
@@ -54,7 +54,6 @@ function Spinners() {
 
                 <Spinner animation="grow" variant="dark"/>
             </div>
-
 
             <>
                 <h3 className='texts'>5:</h3>

@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {Toast, Row, Col, Button} from 'react-bootstrap';
 
-
 function Example() {
     const [showA, setShowA] = useState(true);
     const [showB, setShowB] = useState(true);
@@ -53,7 +52,6 @@ function Example() {
     );
 }
 
-
 function Example2() {
     const [show, setShow] = useState(false);
 
@@ -79,7 +77,6 @@ function Example2() {
         </Row>
     );
 }
-
 
 function Tabs() {
     return (

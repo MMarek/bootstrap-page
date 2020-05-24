@@ -18,28 +18,27 @@ function Alert1() {
                 This is a {variant} alert—check it out!
             </Alert>
         )));
-
 }
 
 function Alert2() {
-return(
-    [
-        'primary',
-        'secondary',
-        'success',
-        'danger',
-        'warning',
-        'info',
-        'light',
-        'dark',
-    ].map((variant, idx) => (
-        <Alert key={idx} variant={variant}>
-            This is a {variant} alert with{' '}
-            <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you
-            like.
-        </Alert>
-    ))
-)
+    return (
+        [
+            'primary',
+            'secondary',
+            'success',
+            'danger',
+            'warning',
+            'info',
+            'light',
+            'dark',
+        ].map((variant, idx) => (
+            <Alert key={idx} variant={variant}>
+                This is a {variant} alert with{' '}
+                <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you
+                like.
+            </Alert>
+        ))
+    )
 }
 
 function Alert3() {
@@ -72,7 +71,7 @@ function Alert4() {
                     lacinia odio sem nec elit. Cras mattis consectetur purus sit amet
                     fermentum.
                 </p>
-                <hr />
+                <hr/>
                 <div className="d-flex justify-content-end">
                     <Button onClick={() => setShow(false)} variant="outline-success">
                         Close me ya'll!
@@ -85,43 +84,42 @@ function Alert4() {
     );
 }
 
-
 function Alerts() {
-return (
-    <div className='block'>
-        <h3>1:</h3>
-    <Alert variant="success">
-        <Alert.Heading>Hey, nice to see you</Alert.Heading>
-        <p>
-            Aww yeah, you successfully read this important alert message. This example
-            text is going to run a bit longer so that you can see how spacing within an
-            alert works with this kind of content.
-        </p>
-        <hr />
-        <p className="mb-0">
-            Whenever you need to, be sure to use margin utilities to keep things nice
-            and tidy.
-        </p>
-    </Alert>
+    return (
+        <div className='block'>
+            <h3>1:</h3>
+            <Alert variant="success">
+                <Alert.Heading>Hey, nice to see you</Alert.Heading>
+                <p>
+                    Aww yeah, you successfully read this important alert message. This example
+                    text is going to run a bit longer so that you can see how spacing within an
+                    alert works with this kind of content.
+                </p>
+                <hr/>
+                <p className="mb-0">
+                    Whenever you need to, be sure to use margin utilities to keep things nice
+                    and tidy.
+                </p>
+            </Alert>
 
-        <h3>2:</h3>
-        <Alert1/>
+            <h3>2:</h3>
+            <Alert1/>
 
-        <h3>3:</h3>
-        <Alert2/>
+            <h3>3:</h3>
+            <Alert2/>
 
-        <h3>4:</h3>
-        <Alert3/>
+            <h3>4:</h3>
+            <Alert3/>
 
-        <h3>5:</h3>
-        <Alert4/>
+            <h3>5:</h3>
+            <Alert4/>
 
-        <br/>
+            <br/>
 
-        <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
+            <Button className='navBtn' href="/" variant="outline-danger" size='md' block>Back to main-page</Button>
 
-    </div>
-);
+        </div>
+    );
 }
 
 export default Alerts;

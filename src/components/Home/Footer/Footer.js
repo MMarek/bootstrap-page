@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Jumbotron, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {Nav, Navbar} from "react-bootstrap";
 
 class Footer extends Component {
 
@@ -11,9 +11,8 @@ class Footer extends Component {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
 
-                            <Nav.Link href="#">Kontakt</Nav.Link>
-                            <Nav.Link href="#">Dodatki</Nav.Link>
-
+                        <Nav.Link href="#">Kontakt</Nav.Link>
+                        <Nav.Link href="#">Dodatki</Nav.Link>
 
                         <Nav>
                             <Nav.Link href="#">Jakieś informacje</Nav.Link>

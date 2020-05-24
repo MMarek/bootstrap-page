@@ -39,7 +39,6 @@ function LoadingButton() {
     );
 }
 
-
 function Buttons() {
     return (
         <header className="block">
@@ -338,4 +337,3 @@ function Buttons() {
 }
 
 export default Buttons
-

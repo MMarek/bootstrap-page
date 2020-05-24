@@ -7,11 +7,12 @@ import {
     Collapse,
     Dropdown,
     Form,
-    Col, ProgressBar, Row, Toast, Table, Spinner
-    // InputGroup, Row
-    // Image,
-    // ToggleButton,
-    // ToggleButtonGroup
+    Col,
+    ProgressBar,
+    Row,
+    Toast,
+    Table,
+    Spinner
 } from 'react-bootstrap';
 
 function Example() {
@@ -113,7 +114,6 @@ function Tabs() {
         </Row>
     );
 }
-
 
 class Body extends Component {
 
@@ -546,4 +546,3 @@ class Body extends Component {
 }
 
 export default Body;
-

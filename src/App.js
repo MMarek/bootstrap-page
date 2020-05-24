@@ -43,7 +43,6 @@ function App() {
             </Switch>
         </HashRouter>
     )
-
 }
 
 export default App;

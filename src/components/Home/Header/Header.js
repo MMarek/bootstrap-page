@@ -1,6 +1,13 @@
 import React, {Component} from "react";
-import {Nav, Navbar, NavDropdown, Container, Row, Col, Image, Jumbotron, Button, Modal} from "react-bootstrap";
-import bootstrap from '../../../assets/bootstrap.png';
+import {
+    Nav,
+    Navbar,
+    NavDropdown,
+    Jumbotron,
+    Button,
+    Modal
+}
+    from "react-bootstrap";
 
 class Header extends Component {
 
@@ -29,8 +36,6 @@ class Header extends Component {
                                 <NavDropdown.Item href="#ultilities">Ultilities</NavDropdown.Item>
                                 <NavDropdown.Item href="#dropdowns">Dropdowns</NavDropdown.Item>
                                 <NavDropdown.Item href="#modals">Modals</NavDropdown.Item>
-                                {/*<NavDropdown.Divider />*/}
-                                {/*<NavDropdown.Item href="#">Separated link</NavDropdown.Item>*/}
                             </NavDropdown>
                             <Nav.Link href="#">Informacje</Nav.Link>
                             <Nav.Link href="#">Dodatki</Nav.Link>
@@ -44,7 +49,6 @@ class Header extends Component {
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
-
 
                 <Jumbotron>
                     <h1>O co chodzi?</h1>
@@ -62,7 +66,6 @@ class Header extends Component {
 }
 
 export default Header;
-
 
 function MyVerticallyCenteredModal(props) {
     return (
